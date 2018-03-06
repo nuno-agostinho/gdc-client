@@ -2,8 +2,7 @@
 Docker to run GDC Data Transfer Tool (gdc-client)
 
 ## Available software
-- [gdc-client](https://github.com/NCI-GDC/gdc-client) (run using the `gdc-client` command)
-- [python](https://python.org) 2.7
+- [gdc-client](https://github.com/NCI-GDC/gdc-client) 1.3.0 (run using the `gdc-client` command)
 
 ## Maintainer
 [Nuno Agostinho](mailto:nunodanielagostinho@gmail.com) (2018)
