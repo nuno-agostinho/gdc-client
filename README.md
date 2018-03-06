@@ -6,5 +6,7 @@ Docker to run GDC Data Transfer Tool (gdc-client)
 
 ## Maintainer
 [Nuno Agostinho](mailto:nunodanielagostinho@gmail.com) (2018)
+
 [Disease Transcriptomics Lab](http://imm.medicina.ulisboa.pt/group/distrans/)
+
 Instituto de Medicina Molecular João Lobo Antunes
