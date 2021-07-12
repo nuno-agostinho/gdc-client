@@ -11,7 +11,7 @@ RUN pip install virtualenv
 ENV gdc=gdc-client
 ADD ${gdc} ${gdc}
 WORKDIR ${gdc}/bin
-RUN ./package
+RUN bash package
 
 RUN unzip -o *.zip
 RUN rm *.zip
