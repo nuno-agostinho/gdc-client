@@ -1,15 +1,21 @@
-FROM ubuntu
+FROM python:2
 MAINTAINER Nuno Agostinho <nunodanielagostinho@gmail.com>
 
-RUN apt-get update
+RUN apt-get update && apt-get install -y \
+  unzip \
+  python3-dev \
+  && rm -rf /var/lib/apt/lists/*
 
-ENV SW=/root/software
-WORKDIR ${SW}
+RUN pip install virtualenv
 
 ENV gdc=gdc-client
-ADD ${gdc}.zip ${gdc}.zip
-RUN apt-get install -y --no-install-recommends unzip
-RUN unzip ${gdc}.zip
-RUN rm ${gdc}.zip
+ADD ${gdc} ${gdc}
+WORKDIR ${gdc}/bin
+RUN ./package
 
-ENV PATH="${PATH}:${SW}"
+RUN unzip -o *.zip
+RUN rm *.zip
+
+ENV PATH=/${gdc}/bin:$PATH
+
+WORKDIR /home
